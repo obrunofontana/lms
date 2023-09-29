@@ -58,7 +58,7 @@ export const ChaptersForm = ({ initialData, courseId }: ChaptersFormProps) => {
       toggleCreating();
       router.refresh();
     } catch {
-      toast.error('Something went wrong');
+      toast.error('Ops! Algo deu errado');
     }
   };
 
@@ -69,10 +69,10 @@ export const ChaptersForm = ({ initialData, courseId }: ChaptersFormProps) => {
       await axios.put(`/api/courses/${courseId}/chapters/reorder`, {
         list: updateData,
       });
-      toast.success('Chapters reordered');
+      toast.success('Capítulos reordenados');
       router.refresh();
     } catch {
-      toast.error('Something went wrong');
+      toast.error('Ops! Algo deu errado');
     } finally {
       setIsUpdating(false);
     }
