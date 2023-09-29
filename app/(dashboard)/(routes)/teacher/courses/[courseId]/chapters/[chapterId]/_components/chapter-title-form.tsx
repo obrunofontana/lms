@@ -55,11 +55,11 @@ export const ChapterTitleForm = ({
         `/api/courses/${courseId}/chapters/${chapterId}`,
         values
       );
-      toast.success('Chapter updated');
+      toast.success('Capítulo atualizado');
       toggleEdit();
       router.refresh();
     } catch {
-      toast.error('Something went wrong');
+      toast.error('Ops! Algo deu errado');
     }
   };
 
